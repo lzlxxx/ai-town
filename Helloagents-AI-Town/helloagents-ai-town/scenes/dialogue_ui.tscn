@@ -1,0 +1,101 @@
+[gd_scene load_steps=2 format=3 uid="uid://cm0yi2d074t64"]
+
+[ext_resource type="Script" uid="uid://dk1f7x00sdtru" path="res://scripts/dialogue_ui.gd" id="1_dwk8m"]
+
+[node name="DialogueUI" type="CanvasLayer"]
+visible = false
+script = ExtResource("1_dwk8m")
+
+[node name="Panel" type="Panel" parent="."]
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -320.0
+offset_bottom = 0.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="NPCName" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 28.0
+offset_top = 18.0
+offset_right = 300.0
+offset_bottom = 50.0
+theme_override_font_sizes/font_size = 24
+text = "NPC名字"
+
+[node name="NPCTitle" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 28.0
+offset_top = 52.0
+offset_right = 300.0
+offset_bottom = 78.0
+theme_override_font_sizes/font_size = 16
+theme_override_colors/font_color = Color(0.45452422, 0.45452428, 0.45452422, 1)
+text = "职位"
+
+[node name="EmotionLabel" type="Label" parent="Panel"]
+layout_mode = 0
+anchor_left = 0.7
+anchor_right = 1.0
+offset_left = 0.0
+offset_top = 22.0
+offset_right = -28.0
+offset_bottom = 50.0
+theme_override_colors/font_color = Color(0.68, 0.72, 0.78, 1)
+theme_override_font_sizes/font_size = 16
+horizontal_alignment = 2
+text = "情绪: 平静"
+
+[node name="DialogueText" type="RichTextLabel" parent="Panel"]
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 28.0
+offset_top = 86.0
+offset_right = -28.0
+offset_bottom = -82.0
+theme_override_font_sizes/normal_font_size = 18
+bbcode_enabled = true
+scroll_following = true
+scroll_following_visible_characters = true
+
+[node name="PlayerInput" type="LineEdit" parent="Panel"]
+layout_mode = 0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 28.0
+offset_top = -62.0
+offset_right = -260.0
+offset_bottom = -20.0
+theme_override_font_sizes/font_size = 18
+placeholder_text = "输入消息..."
+clear_button_enabled = true
+
+[node name="SendButton" type="Button" parent="Panel"]
+layout_mode = 0
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -240.0
+offset_top = -62.0
+offset_right = -130.0
+offset_bottom = -20.0
+theme_override_font_sizes/font_size = 18
+text = "发送"
+
+[node name="CloseButton" type="Button" parent="Panel"]
+layout_mode = 0
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -118.0
+offset_top = -62.0
+offset_right = -28.0
+offset_bottom = -20.0
+theme_override_font_sizes/font_size = 18
+text = "关闭"
